@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    .mapContainer{
+      position: relative;
+      width: 1000px; height: 500px;
+      transition: all 8s;
+      margin: 0 auto;
+    }
+    </style>
+  </head>
+  <body>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="dist/datamaps.usa.min.js"></script>
+    <div class="mapContainer" id="container"></div>
+
+
+
+    <script>
+
+        var states = {};
+
+
+        var map = new Datamap({
+          element: document.getElementById('container'),
+          scope:'usa',
+          geographyConfig: {
+            hideHawaiiAndAlaska: true,
+            borderWidth: 0
+          },
+          fills:{
+            0: '#FFFFFF',
+            1: '#BF3F3F',
+            2: '#7F3FBF',
+            3: '#3F7FBF',
+            4: '#3FBFBF',
+            defaultFill: '#888888'
+          },
+        });
+
+      d3.json("connect.json", function(error, data){
+        states = data;
+
+        map.bubbles(Object.keys(states).map( function(d){ return {centered: d, radius: 3}; }))
+        //start at KS
+        var queue = [["KY",0]];
+        var used  = [];
+        var arcs  = [];
+        var colors = {}
+
+        processKeyLevelTraversal(queue, used, arcs, colors);
+      });
+
+      function processKeyBFS(queue, used, arcs, colors){
+        var top = queue.shift();
+        var current_key = top[0];
+        var current_level = top[1];
+
+        var delay = 400;
+        colors[current_key] = {'fillKey': states[current_key]['fill2']};
+        used.push(current_key);
+
+        setTimeout( function(){
+          // put all the connections that we haven't seen into the queue
+          for (var index in states[current_key]["connection"]){
+            var place_to_go = states[current_key]["connection"][index];
+            if (!(used.includes(place_to_go))){
+              if (!(queue.includes(place_to_go))){
+                queue.push([place_to_go, current_level + 1]);
+              }
+              arcs.push({'origin': current_key, 'destination': place_to_go});
+              colors[place_to_go] = {'fillKey': states[place_to_go]['fill2']};
+            }
+          }
+          map.updateChoropleth(colors);
+          map.arc(arcs,{strokeWidth: 1, arcSharpness: 0, animationSpeed: 1200});
+
+          if (queue.length > 0){processKeyBFS(queue, used, arcs, colors);}
+        }, delay);
+      }
+
+      function processKeyLevelTraversal(queue, used, arcs, colors){
+        var current_level = queue[0][1];
+        var delay = 1200;
+        setTimeout( function(){
+          while ((queue.length > 0) && (queue[0][1] == current_level)){
+            var current_key = queue.shift()[0];
+            colors[current_key] = {'fillKey':states[current_key]['fill2']};
+            used.push(current_key);
+
+            for (var index in states[current_key]["connection"]){
+              var place_to_go = states[current_key]["connection"][index];
+              if (!(used.includes(place_to_go))){
+                if (!(queue.includes(place_to_go))){
+                  queue.push([place_to_go, current_level + 1]);
+                }
+                arcs.push({'origin': current_key, 'destination': place_to_go});
+                colors[place_to_go] = {'fillKey': states[place_to_go]['fill2']};
+              }
+            }
+          }
+
+          map.updateChoropleth(colors);
+          map.arc(arcs,{strokeWidth: 2, strokeColor:'#444', arcSharpness: 0});
+          if (queue.length > 0){processKeyLevelTraversal(queue, used, arcs, colors);}
+        }, delay);
+      }
+
+    </script>
+
+  </body>
+</html>

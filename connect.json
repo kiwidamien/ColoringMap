@@ -1,0 +1,461 @@
+{
+  "WA": {
+    "connection": [
+      "ID",
+      "OR"
+    ],
+    "fill2": 1
+  },
+  "DE": {
+    "connection": [
+      "MD",
+      "PA",
+      "NJ"
+    ],
+    "fill2": 1
+  },
+  "DC": {
+    "connection": [
+      "MD",
+      "VA"
+    ],
+    "fill2": 2
+  },
+  "WI": {
+    "connection": [
+      "MI",
+      "MN",
+      "IA",
+      "IL"
+    ],
+    "fill2": 3
+  },
+  "WV": {
+    "connection": [
+      "OH",
+      "PA",
+      "MD",
+      "VA",
+      "KY"
+    ],
+    "fill2": 2
+  },
+  "FL": {
+    "connection": [
+      "AL",
+      "GA"
+    ],
+    "fill2": 3
+  },
+  "WY": {
+    "connection": [
+      "MT",
+      "SD",
+      "NE",
+      "CO",
+      "UT",
+      "ID"
+    ],
+    "fill2": 1
+  },
+  "NH": {
+    "connection": [
+      "VT",
+      "ME",
+      "MA"
+    ],
+    "fill2": 4
+  },
+  "NJ": {
+    "connection": [
+      "DE",
+      "PA",
+      "NY"
+    ],
+    "fill2": 2
+  },
+  "NM": {
+    "connection": [
+      "AZ",
+      "CO",
+      "OK",
+      "TX"
+    ],
+    "fill2": 3
+  },
+  "TX": {
+    "connection": [
+      "NM",
+      "OK",
+      "AR",
+      "LA"
+    ],
+    "fill2": 2
+  },
+  "LA": {
+    "connection": [
+      "TX",
+      "AR",
+      "MS"
+    ],
+    "fill2": 3
+  },
+  "NC": {
+    "connection": [
+      "VA",
+      "TN",
+      "GA",
+      "SC"
+    ],
+    "fill2": 4
+  },
+  "ND": {
+    "connection": [
+      "MN",
+      "SD",
+      "MT"
+    ],
+    "fill2": 4
+  },
+  "NE": {
+    "connection": [
+      "SD",
+      "IA",
+      "MO",
+      "KS",
+      "CO",
+      "WY"
+    ],
+    "fill2": 3
+  },
+  "TN": {
+    "connection": [
+      "KY",
+      "VA",
+      "NC",
+      "GA",
+      "AL",
+      "MS",
+      "AR",
+      "MO"
+    ],
+    "fill2": 3
+  },
+  "NY": {
+    "connection": [
+      "NJ",
+      "PA",
+      "VT",
+      "MA",
+      "CT"
+    ],
+    "fill2": 1
+  },
+  "PA": {
+    "connection": [
+      "NY",
+      "NJ",
+      "DE",
+      "MD",
+      "WV",
+      "OH"
+    ],
+    "fill2": 4
+  },
+  "RI": {
+    "connection": [
+      "CT",
+      "MA"
+    ],
+    "fill2": 1
+  },
+  "NV": {
+    "connection": [
+      "ID",
+      "UT",
+      "AZ",
+      "CA",
+      "OR"
+    ],
+    "fill2": 1
+  },
+  "VA": {
+    "connection": [
+      "NC",
+      "TN",
+      "KY",
+      "WV",
+      "MD",
+      "DC"
+    ],
+    "fill2": 1
+  },
+  "CO": {
+    "connection": [
+      "WY",
+      "NE",
+      "KS",
+      "OK",
+      "NM",
+      "UT"
+    ],
+    "fill2": 2
+  },
+  "CA": {
+    "connection": [
+      "OR",
+      "NV",
+      "AZ"
+    ],
+    "fill2": 4
+  },
+  "AL": {
+    "connection": [
+      "MS",
+      "TN",
+      "GA",
+      "FL"
+    ],
+    "fill2": 2
+  },
+  "AR": {
+    "connection": [
+      "MO",
+      "TN",
+      "MS",
+      "LA",
+      "TX",
+      "OK"
+    ],
+    "fill2": 1
+  },
+  "VT": {
+    "connection": [
+      "NY",
+      "NH",
+      "MA"
+    ],
+    "fill2": 3
+  },
+  "IL": {
+    "connection": [
+      "IN",
+      "KY",
+      "MO",
+      "IA",
+      "WI"
+    ],
+    "fill2": 1
+  },
+  "GA": {
+    "connection": [
+      "FL",
+      "AL",
+      "TN",
+      "NC",
+      "SC"
+    ],
+    "fill2": 1
+  },
+  "IN": {
+    "connection": [
+      "MI",
+      "OH",
+      "KY",
+      "IL"
+    ],
+    "fill2": 3
+  },
+  "IA": {
+    "connection": [
+      "MN",
+      "WI",
+      "IL",
+      "MO",
+      "NE",
+      "SD"
+    ],
+    "fill2": 4
+  },
+  "OK": {
+    "connection": [
+      "KS",
+      "MO",
+      "AR",
+      "TX",
+      "NM",
+      "CO"
+    ],
+    "fill2": 4
+  },
+  "AZ": {
+    "connection": [
+      "CA",
+      "NV",
+      "UT",
+      "NM"
+    ],
+    "fill2": 2
+  },
+  "ID": {
+    "connection": [
+      "MT",
+      "WY",
+      "UT",
+      "NV",
+      "OR",
+      "WA"
+    ],
+    "fill2": 4
+  },
+  "CT": {
+    "connection": [
+      "NY",
+      "MA",
+      "RI"
+    ],
+    "fill2": 3
+  },
+  "ME": {
+    "connection": [
+      "NH"
+    ],
+    "fill2": 1
+  },
+  "MD": {
+    "connection": [
+      "VA",
+      "WV",
+      "PA",
+      "DC",
+      "DE"
+    ],
+    "fill2": 3
+  },
+  "MA": {
+    "connection": [
+      "RI",
+      "CT",
+      "NY",
+      "NH",
+      "VT"
+    ],
+    "fill2": 2
+  },
+  "OH": {
+    "connection": [
+      "PA",
+      "WV",
+      "KY",
+      "IN",
+      "MI"
+    ],
+    "fill2": 1
+  },
+  "UT": {
+    "connection": [
+      "ID",
+      "WY",
+      "CO",
+      "AZ",
+      "NV"
+    ],
+    "fill2": 3
+  },
+  "MO": {
+    "connection": [
+      "IA",
+      "IL",
+      "KY",
+      "TN",
+      "AR",
+      "OK",
+      "KS",
+      "NE"
+    ],
+    "fill2": 2
+  },
+  "MN": {
+    "connection": [
+      "WI",
+      "IA",
+      "SD",
+      "ND"
+    ],
+    "fill2": 1
+  },
+  "MI": {
+    "connection": [
+      "WI",
+      "IN",
+      "OH"
+    ],
+    "fill2": 2
+  },
+  "KS": {
+    "connection": [
+      "NE",
+      "MO",
+      "OK",
+      "CO"
+    ],
+    "fill2": 1
+  },
+  "MT": {
+    "connection": [
+      "ND",
+      "SD",
+      "WY",
+      "ID"
+    ],
+    "fill2": 3
+  },
+  "MS": {
+    "connection": [
+      "LA",
+      "AR",
+      "TN",
+      "AL"
+    ],
+    "fill2": 4
+  },
+  "SC": {
+    "connection": [
+      "GA",
+      "NC"
+    ],
+    "fill2": 2
+  },
+  "KY": {
+    "connection": [
+      "IN",
+      "OH",
+      "WV",
+      "VA",
+      "TN",
+      "MO",
+      "IL"
+    ],
+    "fill2": 4
+  },
+  "OR": {
+    "connection": [
+      "CA",
+      "NV",
+      "ID",
+      "WA"
+    ],
+    "fill2": 2
+  },
+  "SD": {
+    "connection": [
+      "ND",
+      "MN",
+      "IA",
+      "NE",
+      "WY",
+      "MT"
+    ],
+    "fill2": 2
+  }
+}

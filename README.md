@@ -14,5 +14,5 @@ This is a simple project that shows how to use the D3-driven [datamaps](http://d
 
 ### Final frame output:
 <p align="center">
-![four_color.png](four_color.png)
+<img src="four_color.png">
 </p>
